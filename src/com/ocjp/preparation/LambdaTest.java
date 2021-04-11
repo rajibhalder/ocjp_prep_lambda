@@ -4,6 +4,7 @@ public class LambdaTest {
     public static void main(String args[]) {
         LambdaTest tester = new LambdaTest();
 
+        // Part 1
         //with type declaration
         MathOperation addition = (int a, int b) -> a + b;
 
@@ -33,6 +34,17 @@ public class LambdaTest {
 
         greetService1.sayMessage("Mahesh");
         greetService2.sayMessage("Suresh");
+
+        //Part 2
+        int a = 5;
+
+        // lambda expression to define the calculate method
+        Square s = (int x)->x*x;
+
+        // parameter passed and return type must be
+        // same as defined in the prototype
+        int ans = s.calculate(a);
+        System.out.println(ans);
     }
 
     private int operate(int a, int b, MathOperation mathOperation) {
